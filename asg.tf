@@ -29,4 +29,5 @@ resource "aws_autoscaling_group" "application_asg" {
   min_size           = 1
   launch_configuration = aws_launch_configuration.as_conf.name
   target_group_arns = [aws_lb_target_group.application.id]
+  vpc_zone_identifier = data.aws_subnet_ids.selected_vpc.ids
 }
