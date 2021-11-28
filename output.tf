@@ -1,5 +1,5 @@
 output "endpoint"{
-    value = aws_instance.web.public_ip
+    value = aws_lb.application.dns_name
 }
 
 output "security_group_id"{

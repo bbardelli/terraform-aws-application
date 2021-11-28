@@ -28,5 +28,5 @@ resource "aws_autoscaling_group" "application_asg" {
   max_size           = 2
   min_size           = 1
   launch_configuration = aws_launch_configuration.as_conf.name
-  aws_lb_target_group = aws_lb_target_group.application.id
+  target_group_arns = [aws_lb_target_group.application.id]
 }
