@@ -16,8 +16,7 @@ resource aws_instance "web"{
     vpc_security_group_ids = [aws_security_group.application_access.id]
     user_data = <<EOF
         #!/bin/bash
-        sudo echo 'ENV-TEST=${var.db_endpoint}' >> /etc/environment
-        sudo export ENV-TEST=${var.db_endpoint}
+        sudo echo '${var.db_endpoint}' >> /var/application/config.db        
         EOF
     
 
