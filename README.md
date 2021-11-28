@@ -34,10 +34,11 @@ Outputs
 
  - `endpoint` - published endpoint
  - `security_group_id` - compte security group
- - `compute_role` - isntance role used
+ - `compute_role_arn` - isntance role arn used
+ - `compute_role_name` - isntance role name used
 
 
 Authors
 =======
 
-name.surname@company.com
+Bruno Bardelli
