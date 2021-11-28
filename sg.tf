@@ -17,7 +17,7 @@ resource "aws_security_group" "application_access" {
     from_port        = 0
     to_port          = 0
     protocol         = "-1"
-    security_groups = aws.security_group.application_access.id
+    security_groups = security_group.application_access.id
   }
 
   egress {
