@@ -17,7 +17,7 @@ resource aws_instance "web"{
     user_data = <<EOF
         #!/bin/bash
         sudo echo 'ENV-TEST=${var.db_endpoint}' >> /etc/environment
-        touch /tmp/${var.db_endpoint}
+        sudo export ENV-TEST=${var.db_endpoint}
         EOF
     
 
