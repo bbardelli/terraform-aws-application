@@ -29,6 +29,6 @@ resource "aws_security_group" "application_access" {
   }
 
   tags = {
-    Name = "allow_tls"
+    Name = "application_access"
   }
 }
