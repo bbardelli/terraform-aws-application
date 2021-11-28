@@ -8,6 +8,9 @@ variable ami_name{
 variable region {
     type = string
 }
+variable db_endpoint{
+    type = string
+}
 variable instance_type{
     type = string
     default = "t3.small"

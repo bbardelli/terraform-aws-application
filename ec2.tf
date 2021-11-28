@@ -14,6 +14,6 @@ resource aws_instance "web"{
     associate_public_ip_address = true
     iam_instance_profile = aws_iam_instance_profile.application_profile.id
     vpc_security_group_ids = [aws_security_group.application_access.id]
-
+    user_data = "echo 'ENV-TEST=${var.db_endpoint}' >> /etc/environment"
 
 }
