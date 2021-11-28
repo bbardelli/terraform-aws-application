@@ -13,7 +13,7 @@ resource aws_instance "web"{
     instance_type = var.instance_type    
     associate_public_ip_address = true
     iam_instance_profile = aws_iam_instance_profile.application_profile.id
-    security_groups = [aws_security_group.application_access]
+    vpc_security_group_ids = [aws_security_group.application_access.id]
 
 
 }
