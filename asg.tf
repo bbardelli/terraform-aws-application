@@ -13,6 +13,7 @@ resource "aws_launch_configuration" "as_conf" {
   image_id      = data.aws_ami.app.id
   instance_type = var.instance_type
   iam_instance_profile = aws_iam_instance_profile.application_profile.id
+  security_groups = [aws_security_group.application_access.id]
   user_data = <<EOF
         #!/bin/bash
         sudo echo '${var.db_endpoint}' >> /var/application/config.db        
