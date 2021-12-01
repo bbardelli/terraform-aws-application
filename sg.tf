@@ -1,5 +1,4 @@
-resource "aws_security_group" "application_access" {
-  name        = "application access"
+resource "aws_security_group" "application_access" {  
   description = "Allow application access traffic"
   vpc_id      = var.vpc_id
 

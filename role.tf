@@ -2,8 +2,7 @@ data "aws_iam_policy" "AmazonSSMManagedInstanceCore" {
   arn = "arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore"
 }
 
-resource "aws_iam_instance_profile" "application_profile" {
-  name = "test_profile"
+resource "aws_iam_instance_profile" "application_profile" {  
   role = aws_iam_role.app_role.name
 }
 
